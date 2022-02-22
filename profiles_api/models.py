@@ -28,7 +28,7 @@ class UserProfileManager(BaseUserManager):
         user.save(using=self._db)
 
         return user
-
+#Be careful not to use userProfiles because the s generates automatically
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Database model for users in the system"""
     email = models.EmailField(max_length=255, unique=True)
